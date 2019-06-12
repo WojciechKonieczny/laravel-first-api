@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Player;
+use App\Http\Controllers\PlayerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
+Route::get('players', 'PlayerController@index');
+Route::get('players/{id}', 'PlayerController@show');
+Route::post('players', 'PlayerController@store');
+Route::put('players/{id}', 'PlayerController@update');
+Route::delete('players/{id}', 'PlayerController@delete');
