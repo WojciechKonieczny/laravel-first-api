@@ -8,6 +8,6 @@ class Player extends Model {
     protected $fillable = [
       'firstname',
       'surname',
-      'agge'
+      'age'
     ];
 }
