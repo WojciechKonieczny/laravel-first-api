@@ -1,12 +1,12 @@
 # Laravel first api
 > My first laravel REST API :)
 
-### Requirements
+### 1. Requirements
 > * database e.g. MySQL with phpmyadmin
 > * PHP >= 7
 > * Laravel >= 5.8
 
-### How to run?
+### 2. How to run?
 > 1. clone this repo
 > 2. edit .env
 > 3. run your database
@@ -15,21 +15,21 @@
 > 6. php artisan migrate
 > 7. php artisan db:seed
 
-### Main address
+### 3. Main address
 > localhost:8000/api/players
 
-### ENDPOINTS
-GET /players
+### 4. ENDPOINTS
+4.1. ```GET /players```
 > Get all players
 
-GET /players/{id}
+4.2. ```GET /players/{id}```
 > Get single player
 
-POST /players
+4.3. ```POST /players```
 > Add player
 
-PUT /players/{id}
+4.4. ```PUT /players/{id}```
 > Update player
 
-DELETE /players/{id}
+4.4. ```DELETE /players/{id}```
 > Delete player
