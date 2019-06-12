@@ -11,24 +11,26 @@ class PlayerController extends Controller {
     }
 
     public function show($id) {
-        return Player::find($id);
+        $player = Player::find($id);
+        return response()->json($player, 200);
     }
 
     public function store(Request $request) {
-        return Player::create($request->all());
+        $player = Player::create($request->all());
+        return response()->json($player, 201);
     }
 
     public function update(Request $request, $id) {
         $player = Player::findOrFail($id);
         $player->update($request->all());
 
-        return $player;
+        return response()->json($player, 200);
     }
 
     public function delete(Request $request, $id) {
         $player = Player::findOrFail($id);
         $player->delete();
 
-        return 200;
+        return response()->json(null, 204);
     }
 }
